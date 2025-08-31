@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-key="productsPageTitle">AI Co. | Our Products</title>
+    <title data-i18n-key="productsPageTitle">Autotask Solutions | Our Products</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50' y='55' dominant-baseline='middle' text-anchor='middle' font-size='55' font-family='Inter, sans-serif' font-weight='bold' fill='white'>AS</text></svg>">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
     <script type="module" src="index.tsx"></script>
 </head>
 <body>
     <header class="main-header">
         <nav class="main-nav container">
-            <a href="/" class="logo" data-i18n-key="logo">AI Co.</a>
+            <a href="index.html" class="logo" data-i18n-key="logo">Autotask Solutions</a>
             <div class="nav-links">
                 <a href="products.html" class="btn btn-secondary btn-nav" data-i18n-key="productsLink">Products</a>
+                <a href="index.html#contact" class="btn btn-secondary btn-nav" data-i18n-key="contactUsLink">Contact Us</a>
                 <a href="#" class="btn btn-secondary btn-nav schedule-call-btn" data-i18n-key="scheduleCall">Agendar una llamada</a>
                 <a href="https://lemon-sea-067efec0f.6.azurestaticapps.net/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav" data-i18n-key="accessDemo">Acceder al Chatbot de IA</a>
                 <div class="theme-switch-wrapper">
@@ -43,41 +56,138 @@
                 <p class="section-subtitle" data-i18n-key="productsPageSubtitle">Explore the AI-powered tools we've built to drive efficiency and innovation.</p>
                 <div class="products-grid">
                     <div class="products-column">
-                        <h3 class="products-category" data-i18n-key="productsCat1">AI CHATBOTS & RAG</h3>
-                        <ul>
-                            <li><a href="#"><span class="dot dot-green"></span><span data-i18n-key="product1_1">Tulum: Instagram Chatbot</span></a></li>
-                            <li><a href="#"><span class="dot dot-blue"></span><span data-i18n-key="product1_2">WhatsApp Conversational Agent</span></a></li>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product1_3">RAG Knowledge Base Engine (Pinecone)</span></a></li>
-                        </ul>
-                        <h3 class="products-category" data-i18n-key="productsCat2">DATA PROCESSING & EXTRACTION</h3>
-                        <ul>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product2_1">Automated PDF Invoice Extractor</span></a></li>
-                            <li><a href="#"><span class="dot dot-blue"></span><span data-i18n-key="product2_2">Website & API Scraper (Apify, Firecrawl)</span></a></li>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product2_3">AI Web Researcher</span></a></li>
+                        <h3 class="products-category-page" data-i18n-key="servicesCat1Title">Automatización y Optimización</h3>
+                        <ul class="product-list-detailed">
+                            <li>
+                                <span class="dot dot-blue"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat1Prod1Title">Pack de Automatización para Startups/PyMEs</strong>
+                                    <p data-i18n-key="servicesCat1Prod1Desc">Tu primer paso a la eficiencia. Automatizamos tus 3 procesos más repetitivos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="dot dot-yellow"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat1Prod2Title">Extractor de Datos Inteligente (PDFs y Webs)</strong>
+                                    <p data-i18n-key="servicesCat1Prod2Desc">Transformamos tus documentos y webs en datos estructurados, sin errores.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="dot dot-green"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat1Prod3Title">Integración de Sistemas y APIs</strong>
+                                    <p data-i18n-key="servicesCat1Prod3Desc">Hacemos que todas tus aplicaciones (CRM, ERP, etc.) se comuniquen entre sí.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="products-column">
-                        <h3 class="products-category" data-i18n-key="productsCat3">LEAD GENERATION & SALES AUTOMATION</h3>
-                        <ul>
-                            <li><a href="#"><span class="dot dot-blue"></span><span data-i18n-key="product3_1">Lead Generation, Scoring & Communication</span></a></li>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product3_2">Cold Email Icebreaker Generator</span></a></li>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product3_3">Google Maps Lead Scraper</span></a></li>
+                        <h3 class="products-category-page" data-i18n-key="servicesCat2Title">Agentes Conversacionales y RAG</h3>
+                        <ul class="product-list-detailed">
+                            <li>
+                                <span class="dot dot-yellow"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat2Prod1Title">Chatbot de Psicología y Salud Mental</strong>
+                                    <p data-i18n-key="servicesCat2Prod1Desc">Un asistente empático y seguro, diseñado con principios de psicología para ofrecer apoyo.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="dot dot-green"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat2Prod2Title">Motor de Base de Conocimiento RAG</strong>
+                                    <p data-i18n-key="servicesCat2Prod2Desc">Convertimos tus documentos en un cerebro experto que tus sistemas pueden consultar.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="dot dot-blue"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat2Prod3Title">Chatbot de IA para Instagram</strong>
+                                    <p data-i18n-key="servicesCat2Prod3Desc">Lleva tus ventas y soporte a las plataformas que usan tus clientes, 24/7.</p>
+                                </div>
+                            </li>
                         </ul>
-                        <h3 class="products-category" data-i18n-key="productsCat4">CORE TOOLS & INTEGRATIONS</h3>
-                        <ul>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product4_1">Google Calendar Event Agent</span></a></li>
-                            <li><a href="#"><span class="dot dot-green"></span><span data-i18n-key="product4_2">Supabase Chat Memory Manager</span></a></li>
-                            <li><a href="#"><span class="dot dot-yellow"></span><span data-i18n-key="product4_3">BigQuery Data Agent</span></a></li>
+                    </div>
+                    <div class="products-column">
+                        <h3 class="products-category-page" data-i18n-key="productsCat3TitleUpdated">Motores de Crecimiento (Ventas y Marketing)</h3>
+                        <ul class="product-list-detailed">
+                            <li>
+                                <span class="dot dot-green"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat3Prod1Title">Motor de Generación de Leads B2B</strong>
+                                    <p data-i18n-key="servicesCat3Prod1Desc">Una máquina que encuentra, enriquece y califica leads de alta calidad mientras duermes.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="dot dot-blue"></span>
+                                <div>
+                                    <strong data-i18n-key="servicesCat3Prod2Title">Generador de "Rompehielos" para Correos en Frío</strong>
+                                    <p data-i18n-key="servicesCat3Prod2Desc">Usamos IA para crear mensajes de contacto personalizados que triplican tu tasa de respuesta.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="products-column">
+                        <h3 class="products-category-page" data-i18n-key="servicesCat4Title">IA Avanzada y Consultoría</h3>
+                        <ul class="product-list-detailed">
+                            <li>
+                                <span class="dot dot-blue"></span>
+                                <div>
+                                    <strong data-i18n-key="productsCat4Prod1Title">Consultoría en Modelos de IA de Vanguardia</strong>
+                                    <p data-i18n-key="productsCat4Prod1Desc">Te ayudamos a elegir e implementar los mejores modelos del mercado (GPT-4o, Gemini 1.5, Llama 3, Claude 3) para tus necesidades específicas.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
+                 <!-- R&D Section -->
+                <section class="research-section" style="padding-top: 6rem; padding-bottom: 2rem;">
+                    <h2 class="section-title" data-i18n-key="researchTitle">Nuestro Laboratorio de I+D: Co-creando el Futuro de la IA</h2>
+                    <p class="section-subtitle" data-i18n-key="researchSubtitle">Estamos constantemente explorando la frontera de la IA para resolver los problemas del mañana. Estas son algunas de las áreas en las que estamos trabajando activamente:</p>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard1Cat">HealthTech - Diagnóstico Asistido</span>
+                            <h3 data-i18n-key="researchCard1Title">Detección de Placas Arteriales (I+D)</h3>
+                            <p data-i18n-key="researchCard1Desc">Investigación activa en modelos de Computer Vision (CNN) para la detección de ateromas en imágenes de angioplastias y ACVs, con el objetivo de asistir al diagnóstico neurológico y cardiológico.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard2Cat">FinTech - Análisis Predictivo</span>
+                            <h3 data-i18n-key="researchCard2Title">Modelos Predictivos para Análisis de Acciones</h3>
+                            <p data-i18n-key="researchCard2Desc">Explorando la aplicación de IA para analizar sentimiento de mercado y datos técnicos, con el objetivo de generar insights de inversión.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard3Cat">Logística - Optimización de Tiempos</span>
+                            <h3 data-i18n-key="researchCard3Title">Optimización de Cadenas de Suministro</h3>
+                            <p data-i18n-key="researchCard3Desc">Aplicando modelos matemáticos y de machine learning para predecir tiempos de llegada y optimizar rutas logísticas, basándonos en la experiencia de nuestro equipo.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard4Cat">LegalTech - Comprensión de Documentos</span>
+                            <h3 data-i18n-key="researchCard4Title">RAG sobre Corpus Legales Extensos</h3>
+                            <p data-i18n-key="researchCard4Desc">Perfeccionando nuestra tecnología RAG para permitir a profesionales del derecho hacer consultas en lenguaje natural sobre miles de páginas de leyes y contratos.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
     
     <footer class="main-footer">
-        <div class="container">
-            <p data-i18n-key="footerText">2025 AI Co. Todos los derechos reservados.</p>
+        <div class="container footer-content">
+            <div class="footer-legal">
+                <p data-i18n-key="footerCopyright">© 2024 Autotask Solutions. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" data-i18n-key="privacyPolicyLink">Privacy Policy</a>
+                    <a href="terms-of-service.html" target="_blank" rel="noopener noreferrer" data-i18n-key="termsOfServiceLink">Terms of Service</a>
+                </nav>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                </a>
+            </div>
         </div>
     </footer>
 

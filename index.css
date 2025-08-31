@@ -16,12 +16,13 @@
     --secondary-text-color: #6B7280;
     --border-color: #E5E7EB;
     --dropdown-bg-color: #FFFFFF;
+    --hover-bg-color: #F3F4F6;
 
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --transition-speed: 0.3s;
 }
 
-body.dark-mode {
+html.dark-mode {
     --bg-color: #0A0A0A;
     --header-bg-color: rgba(10, 10, 10, 0.8);
     --card-bg-color: #111111;
@@ -29,6 +30,7 @@ body.dark-mode {
     --secondary-text-color: #9CA3AF;
     --border-color: #374151;
     --dropdown-bg-color: #1D1D1F;
+    --hover-bg-color: #1F2937;
 }
 
 /* --- Base & Reset --- */
@@ -110,6 +112,10 @@ ul {
 .logo {
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+.logo .logo-highlight {
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -262,6 +268,21 @@ section {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 2.4em; /* Reserve space for two lines to avoid layout shift */
+}
+
+.hero-section h1 .highlight {
+    color: var(--primary-color);
+}
+
+.hero-section h1 .typed-cursor {
+    color: var(--primary-color);
+    animation: typed-blink 0.7s infinite;
+}
+
+@keyframes typed-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -330,11 +351,11 @@ section {
 }
 
 .dropdown-content {
-    display: none;
+    display: flex;
+    gap: 1.5rem;
     position: absolute;
     bottom: calc(100% + 10px);
     left: 50%;
-    transform: translateX(-50%);
     background-color: var(--dropdown-bg-color);
     min-width: 400px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
@@ -343,56 +364,22 @@ section {
     padding: 1.5rem;
     border: 1px solid var(--border-color);
     text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(10px);
+    pointer-events: none;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease, visibility var(--transition-speed) ease;
 }
 
-body.dark-mode .dropdown-content {
+html.dark-mode .dropdown-content {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.dropdown-container:hover .dropdown-content {
-    display: flex;
-    gap: 1.5rem;
-}
-
-
-/* Features Section */
-.features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    padding: 2rem;
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    transition: all var(--transition-speed) ease;
-    text-align: center;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-}
-
-.feature-icon {
-    display: inline-flex;
-    padding: 1rem;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    margin-bottom: 1.5rem;
-}
-
-.feature-card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.feature-card p {
-    color: var(--secondary-text-color);
+.dropdown-container.is-open .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 /* Contact Section */
@@ -513,10 +500,11 @@ textarea.form-control {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2.5rem;
 }
 
+/* Used in dropdown */
 .products-category {
     font-size: 0.75rem;
     font-weight: 600;
@@ -528,16 +516,21 @@ textarea.form-control {
     border-bottom: 1px solid var(--border-color);
 }
 
-.products-column ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+/* Used on Products Page */
+.products-category-page {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .products-column ul:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
+/* Dropdown link styles */
 .products-column li a {
     display: flex;
     align-items: center;
@@ -545,15 +538,59 @@ textarea.form-control {
     font-weight: 600;
     color: var(--text-color);
     transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease;
-    padding: 4px;
-    border-radius: 4px;
-    cursor: default;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 .products-column li a:hover {
     color: var(--text-color);
-    background-color: transparent;
+    background-color: var(--hover-bg-color);
 }
+
+/* Detailed list on products page */
+.product-list-detailed {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-list-detailed li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: background-color var(--transition-speed) ease;
+    border: 1px solid transparent;
+}
+
+.product-list-detailed li:hover {
+    background-color: var(--card-bg-color);
+    border-color: var(--border-color);
+}
+
+.product-list-detailed li .dot {
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.product-list-detailed li strong {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.product-list-detailed li p {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    margin: 0;
+}
+
 
 .dot {
     width: 8px;
@@ -567,6 +604,53 @@ textarea.form-control {
 .dot-yellow { background-color: #FBBF24; }
 
 
+/* --- Research Section --- */
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.research-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.research-card-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.research-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.research-card p {
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+
 /* CTA Section */
 .cta-section {
     background-color: var(--card-bg-color);
@@ -576,14 +660,127 @@ textarea.form-control {
     max-width: 1100px;
 }
 
+/* Legal Content Page */
+.legal-page-section {
+    padding-top: 128px;
+    padding-bottom: 80px;
+    min-height: calc(100vh - 101px); 
+}
+
+.legal-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal-content h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content p, .legal-content ul {
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.legal-content ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.75rem;
+}
+
+.legal-content strong {
+    color: var(--text-color);
+}
+
+.legal-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color var(--transition-speed) ease;
+}
+
+.legal-content a:hover {
+    color: var(--primary-hover-color);
+}
+
 /* Footer */
 .main-footer {
     padding: 3rem 0;
-    text-align: center;
+    font-size: 0.9rem;
     color: var(--secondary-text-color);
     border-top: 1px solid var(--border-color);
     transition: border-color var(--transition-speed) ease;
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+}
+
+.footer-links a {
+    color: var(--secondary-text-color);
+    transition: color var(--transition-speed) ease;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+.footer-links a:hover {
+    color: var(--text-color);
+    text-decoration-color: var(--text-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--secondary-text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+.social-links svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
 
 /* --- Modal --- */
 .modal {
@@ -655,13 +852,28 @@ body.modal-open {
     overflow: hidden;
 }
 
+body.body-no-scroll {
+    overflow: hidden;
+}
+
+/* Modal Dark Mode Override for iFrame content readability */
+html.dark-mode .modal-content {
+    background-color: #FFFFFF;
+    border-color: #E5E7EB;
+}
+
+html.dark-mode .modal-close {
+    color: #6B7280;
+}
+
+html.dark-mode .modal-close:hover,
+html.dark-mode .modal-close:focus {
+    color: #111827;
+}
+
 
 /* --- Responsive --- */
 @media (min-width: 640px) {
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -684,6 +896,25 @@ body.modal-open {
     
     .nav-links {
         display: flex;
+    }
+
+    .products-grid, .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-legal {
+        flex-direction: row;
+        gap: 1.5rem;
+        order: 1;
+    }
+    
+    .social-links {
+        order: 2;
     }
 }
 
@@ -752,15 +983,18 @@ body.modal-open {
 
 
 @media (min-width: 1024px) {
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (min-width: 1200px) {
+    .products-grid, .research-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 /* SPA Page styles */
-#products-page {
+#products-page, #privacy-policy-page, #terms-of-service-page {
     display: none;
 }
