@@ -26,11 +26,9 @@
     <header class="main-header">
         <nav class="main-nav container">
             <a href="index.html" class="logo" data-i18n-key="logo">Autotask Solutions</a>
-            <div class="nav-links">
-                <a href="products.html" class="btn btn-secondary btn-nav" data-i18n-key="productsLink">Products</a>
-                <a href="#contact" class="btn btn-secondary btn-nav" data-i18n-key="contactUsLink">Contact Us</a>
-                <a href="#" class="btn btn-secondary btn-nav schedule-call-btn" data-i18n-key="scheduleCall">Agendar una llamada</a>
-                <a href="https://lemon-sea-067efec0f.6.azurestaticapps.net/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav" data-i18n-key="accessDemo">Acceder al Chatbot de IA</a>
+            <div class="nav-links" id="nav-links-container">
+                <a href="#solutions" class="nav-link" data-i18n-key="solutionsLink">Solutions</a>
+                <a href="#contact" class="nav-link" data-i18n-key="contactUsLink">Contact Us</a>
                 <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="theme-toggle" aria-label="Toggle dark mode">
                         <input type="checkbox" id="theme-toggle" />
@@ -40,8 +38,19 @@
                         </div>
                     </label>
                 </div>
+                 <div class="lang-switch-wrapper">
+                    <select id="lang-switcher" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="zh">中文</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
             </div>
-            <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links-container">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -55,47 +64,135 @@
             <section id="hero" class="hero-section text-center">
                 <div class="animated-bg"></div>
                 <div class="container">
-                    <h1><span id="hero-typed"></span> <span data-i18n-key="heroIntelligenceStatic"></span></h1>
-                    <p class="hero-subtitle" data-i18n-key="heroSubtitle">We build the AI-powered workflows, chatbots, and data systems that will define the future of your business.</p>
+                    <h1 data-i18n-key="heroTitle">Add Intelligence to Your Existing Systems.</h1>
+                    <p class="hero-subtitle" data-i18n-key="heroSubtitle">We build AI modules that plug into your current operation to boost your sales, logistics, and efficiency.</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Agendar una llamada</a>
-                        <div class="dropdown-container">
-                            <a href="products.html" class="btn btn-secondary" data-i18n-key="productsLink">Productos</a>
-                            <div class="dropdown-content">
-                                <div class="products-column">
-                                    <h3 class="products-category" data-i18n-key="servicesCat1Title">Automation & Optimization</h3>
-                                    <ul>
-                                        <li><a href="products.html"><span class="dot dot-blue"></span><span data-i18n-key="servicesCat1Prod1Title">Automation Pack for Startups/SMEs</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-yellow"></span><span data-i18n-key="servicesCat1Prod2Title">Intelligent Data Extractor (PDFs & Websites)</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-green"></span><span data-i18n-key="servicesCat1Prod3Title">Systems & API Integration</span></a></li>
-                                    </ul>
-                                    <h3 class="products-category" data-i18n-key="servicesCat2Title">Conversational Agents & RAG</h3>
-                                    <ul>
-                                        <li><a href="products.html"><span class="dot dot-yellow"></span><span data-i18n-key="servicesCat2Prod1Title">Psychology & Mental Health Chatbot</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-green"></span><span data-i18n-key="servicesCat2Prod2Title">RAG Knowledge Base Engine</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-blue"></span><span data-i18n-key="servicesCat2Prod3Title">Multi-platform Chatbot</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="products-column">
-                                    <h3 class="products-category" data-i18n-key="servicesCat3Title">Growth Engines</h3>
-                                    <ul>
-                                        <li><a href="products.html"><span class="dot dot-green"></span><span data-i18n-key="servicesCat3Prod1Title">B2B Lead Generation Engine</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-blue"></span><span data-i18n-key="servicesCat3Prod2Title">Cold Email 'Icebreaker' Generator</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-yellow"></span><span data-i18n-key="servicesCat3Prod3Title">Intelligent CRM</span></a></li>
-                                    </ul>
-                                    <h3 class="products-category" data-i18n-key="servicesCat4Title">Advanced AI & Consulting</h3>
-                                    <ul>
-                                        <li><a href="products.html"><span class="dot dot-blue"></span><span data-i18n-key="servicesCat4Prod1Title">AI for the Legal Sector (LegalTech)</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-green"></span><span data-i18n-key="servicesCat4Prod2Title">AI Image Analysis (Computer Vision)</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-yellow"></span><span data-i18n-key="servicesCat4Prod3Title">Arterial Plaque Detection (HealthTech - R&D)</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-blue"></span><span data-i18n-key="servicesCat4Prod4Title">BigQuery Data Agent</span></a></li>
-                                        <li><a href="products.html"><span class="dot dot-green"></span><span data-i18n-key="servicesCat4Prod5Title">Predictive Analysis with AI</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="https://lemon-sea-067efec0f.6.azurestaticapps.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n-key="accessDemo">Acceder al Chatbot de IA</a>
+                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Schedule a call</a>
+                        <a href="https://lemon-sea-067efec0f.6.azurestaticapps.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n-key="accessDemo">Try our Chatbot</a>
                         <a href="#contact" class="btn btn-secondary" data-i18n-key="contactUsLink">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions Section -->
+            <section id="solutions" class="solutions-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n-key="productsPageHeading">Our Solutions</h2>
+                    <p class="section-subtitle" data-i18n-key="productsPageSubtitle">Explore the AI-powered tools we've built to drive efficiency and innovation.</p>
+                    <div class="solutions-grid">
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat2Title">Conversational Agents & RAG</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod2Title">RAG Knowledge Base Engine</strong>
+                                        <p data-i18n-key="servicesCat2Prod2Desc">We turn your documents into an expert brain that your systems can consult.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod3Title">Instagram AI Chatbot</strong>
+                                        <p data-i18n-key="servicesCat2Prod3Desc">Engage your audience and automate sales directly on Instagram, 24/7.</p>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <span class="dot dot-yellow"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod1Title">Psychology & Mental Health Chatbot</strong>
+                                        <p data-i18n-key="servicesCat2Prod1Desc">An empathetic and secure assistant, designed with psychological principles to offer support.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat3Title">Lead Generation & Sales Automation</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat3Prod1Title">Intelligence Search & Lead Generation Machine</strong>
+                                        <p data-i18n-key="servicesCat3Prod1Desc">A machine that finds, enriches, and qualifies high-quality leads while you sleep.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat3Prod2Title">Cold Email 'Icebreaker' Generator</strong>
+                                        <p data-i18n-key="servicesCat3Prod2Desc">We use AI to create personalized outreach messages that triple your response rate.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat1Title">Automation & Optimization</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod1Title">Automation Pack for Startups/SMEs</strong>
+                                        <p data-i18n-key="servicesCat1Prod1Desc">Your first step to efficiency. We automate your 3 most repetitive processes.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-yellow"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod2Title">Intelligent Data Extractor (PDFs & Websites)</strong>
+                                        <p data-i18n-key="servicesCat1Prod2Desc">We transform your documents and websites into structured data, without errors.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod3Title">Systems & API Integration</strong>
+                                        <p data-i18n-key="servicesCat1Prod3Desc">We make all your applications (CRM, ERP, etc.) communicate with each other.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat4Title">Advanced AI & Consulting</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="productsCat4Prod1Title">Consulting on Cutting-Edge AI Models</strong>
+                                        <p data-i18n-key="productsCat4Prod1Desc">We help you choose and implement the best models on the market (GPT-4o, Gemini 1.5 Advanced, Llama 3, and Claude 3.5 Sonnet) for your specific needs.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- R&D Section -->
+            <section id="research" class="research-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n-key="researchTitle">Our R&D Lab: AI for Specific Industries</h2>
+                    <p class="section-subtitle" data-i18n-key="researchSubtitle">We focus on applying AI to solve concrete problems in complex industries.</p>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard1Cat">HealthTech - Assisted Diagnosis</span>
+                            <h3 data-i18n-key="researchCard1Title">Arterial Plaque Detection (R&D)</h3>
+                            <p data-i18n-key="researchCard1Desc">Active research in Computer Vision models (CNN) for detecting atheromas in angioplasty and stroke images, aiming to assist neurological and cardiological diagnosis.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard2Cat">FinTech - Predictive Analysis</span>
+                            <h3 data-i18n-key="researchCard2Title">Predictive Models for Stock Analysis</h3>
+                            <p data-i18n-key="researchCard2Desc">Exploring the application of AI to analyze market sentiment and technical data, with the goal of generating investment insights.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard3Cat">Logistics - Time Optimization</span>
+                            <h3 data-i18n-key="researchCard3Title">Supply Chain Optimization</h3>
+                            <p data-i18n-key="researchCard3Desc">Applying mathematical and machine learning models to predict arrival times and optimize logistics routes, based on our team's experience.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard4Cat">LegalTech - Document Understanding</span>
+                            <h3 data-i18n-key="researchCard4Title">RAG on Extensive Legal Corpora</h3>
+                            <p data-i18n-key="researchCard4Desc">Perfecting our RAG technology to allow legal professionals to make natural language queries on thousands of pages of laws and contracts.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -103,20 +200,20 @@
             <!-- Team Section -->
             <section id="team" class="team-section">
                 <div class="container">
-                    <h2 class="section-title" data-i18n-key="teamTitle">Conoce a Nuestro Equipo</h2>
-                    <p class="section-subtitle" data-i18n-key="teamSubtitle">Somos un equipo dedicado de entusiastas de la IA comprometidos con la excelencia.</p>
+                    <h2 class="section-title" data-i18n-key="teamTitle">Meet Our Team</h2>
+                    <p class="section-subtitle" data-i18n-key="teamSubtitle">A unique fusion of AI architecture and end-to-end engineering.</p>
                     <div class="team-grid">
                         <div class="team-card">
-                            <img src="assets/images/joaquin.jpg" alt="Team member Joaquín" class="team-photo">
+                            <img src="https://i.ibb.co/L6V2h7N/joaquin.jpg" alt="Team member Joaquín" class="team-photo">
                             <h3 class="team-name" data-i18n-key="teamMember1Name">Joaquín</h3>
-                            <p class="team-title" data-i18n-key="teamMember1Title">Científico de Datos</p>
-                            <p class="team-desc" data-i18n-key="teamMember1Desc">Apasionado por descubrir insights en los datos y construir sistemas inteligentes. Experto en machine learning y modelado estadístico.</p>
+                            <p class="team-title" data-i18n-key="teamMember1Title">AI Specialist & Data Scientist</p>
+                            <p class="team-desc" data-i18n-key="teamMember1Desc">+4 years of experience in ML projects. Specializes in AI Agents, RAG, and fine-tuning models to solve complex business challenges.</p>
                         </div>
                         <div class="team-card">
-                            <img src="assets/images/pablo.jpg" alt="Team member Pablo" class="team-photo">
+                            <img src="https://i.ibb.co/K2vcz8w/pablo.jpg" alt="Team member Pablo" class="team-photo">
                             <h3 class="team-name" data-i18n-key="teamMember2Name">Pablo</h3>
-                            <p class="team-title" data-i18n-key="teamMember2Title">Desarrollador de IA</p>
-                            <p class="team-desc" data-i18n-key="teamMember2Desc">Enfocado en desarrollar y desplegar aplicaciones de IA escalables. Hábil en ingeniería de software y MLOps.</p>
+                            <p class="team-title" data-i18n-key="teamMember2Title">Software & Automation Engineer</p>
+                            <p class="team-desc" data-i18n-key="teamMember2Desc">+5 years of experience. Expert in designing and deploying robust AI chatbots and N8N automation workflows.</p>
                         </div>
                     </div>
                 </div>
@@ -124,194 +221,40 @@
 
             <!-- Contact Section -->
             <section id="contact" class="contact-section">
-                <div class="container">
-                    <h2 class="section-title" data-i18n-key="contactTitle">Construyamos algo brillante juntos.</h2>
-                    <p class="section-subtitle" data-i18n-key="contactSubtitle">Cuéntanos sobre tu proyecto y te responderemos a la brevedad.</p>
+                <div class="container text-center">
+                     <div class="cta-section">
+                        <h2 class="section-title" data-i18n-key="ctaTitle">Ready to start?</h2>
+                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Schedule a Call With Us</a>
+                        <p class="contact-action-subtitle"><a href="#contact-form" data-i18n-key="contactActionSubtitle">Or, write to us and we’ll get back to you shortly.</a></p>
+                    </div>
+
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder-key="contactNamePlaceholder" placeholder="Tu Nombre" required>
+                            <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder-key="contactNamePlaceholder" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" data-i18n-placeholder-key="contactEmailPlaceholder" placeholder="Tu Email" required>
+                            <input type="email" class="form-control" id="email" name="email" data-i18n-placeholder-key="contactEmailPlaceholder" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
                             <input type="tel" class="form-control" id="phone" name="phone" data-i18n-placeholder-key="contactPhonePlaceholder" placeholder="Your Phone (Optional)">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" name="message" data-i18n-placeholder-key="contactMessagePlaceholder" placeholder="Tu idea, proyecto o pregunta..." required></textarea>
+                            <textarea class="form-control" id="message" name="message" data-i18n-placeholder-key="contactMessagePlaceholder" placeholder="Your idea, project, or question..." required></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary" data-i18n-key="contactSubmitButton">Enviar Mensaje</button>
+                            <button type="submit" class="btn btn-primary" data-i18n-key="contactSubmitButton">Send Message</button>
                             <div id="form-status"></div>
+                            <p class="email-contact-link" data-i18n-key="contactOrEmail"></p>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <!-- CTA Section -->
-            <section>
-                <div class="container">
-                    <div class="cta-section text-center section">
-                        <h2 class="section-title" data-i18n-key="ctaTitle">¿Listo para empezar?</h2>
-                        <p class="section-subtitle" data-i18n-key="ctaSubtitle">Hablemos de cómo la IA puede impulsar tu negocio.</p>
-                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Agendar una llamada</a>
-                    </div>
-                </div>
-            </section>
         </div>
 
-        <section id="products-page" class="products-page-section">
-            <div class="container">
-                <h1 class="section-title" data-i18n-key="productsPageHeading">Our Products & Solutions</h1>
-                <p class="section-subtitle" data-i18n-key="productsPageSubtitle">Explore the AI-powered tools we've built to drive efficiency and innovation.</p>
-                <div class="products-grid">
-                    <div class="products-column">
-                        <h3 class="products-category-page" data-i18n-key="servicesCat1Title">Automatización y Optimización</h3>
-                        <ul class="product-list-detailed">
-                            <li>
-                                <span class="dot dot-blue"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat1Prod1Title">Pack de Automatización para Startups/PyMEs</strong>
-                                    <p data-i18n-key="servicesCat1Prod1Desc">Tu primer paso a la eficiencia. Automatizamos tus 3 procesos más repetitivos.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="dot dot-yellow"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat1Prod2Title">Extractor de Datos Inteligente (PDFs y Webs)</strong>
-                                    <p data-i18n-key="servicesCat1Prod2Desc">Transformamos tus documentos y webs en datos estructurados, sin errores.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="dot dot-green"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat1Prod3Title">Integración de Sistemas y APIs</strong>
-                                    <p data-i18n-key="servicesCat1Prod3Desc">Hacemos que todas tus aplicaciones (CRM, ERP, etc.) se comuniquen entre sí.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="products-column">
-                        <h3 class="products-category-page" data-i18n-key="servicesCat2Title">Agentes Conversacionales y RAG</h3>
-                        <ul class="product-list-detailed">
-                            <li>
-                                <span class="dot dot-yellow"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat2Prod1Title">Chatbot de Psicología y Salud Mental</strong>
-                                    <p data-i18n-key="servicesCat2Prod1Desc">Un asistente empático y seguro, diseñado con principios de psicología para ofrecer apoyo.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="dot dot-green"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat2Prod2Title">Motor de Base de Conocimiento RAG</strong>
-                                    <p data-i18n-key="servicesCat2Prod2Desc">Convertimos tus documentos en un cerebro experto que tus sistemas pueden consultar.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="dot dot-blue"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat2Prod3Title">Chatbot de IA para Instagram</strong>
-                                    <p data-i18n-key="servicesCat2Prod3Desc">Lleva tus ventas y soporte a las plataformas que usan tus clientes, 24/7.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="products-column">
-                        <h3 class="products-category-page" data-i18n-key="productsCat3TitleUpdated">Motores de Crecimiento (Ventas y Marketing)</h3>
-                        <ul class="product-list-detailed">
-                            <li>
-                                <span class="dot dot-green"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat3Prod1Title">Motor de Generación de Leads B2B</strong>
-                                    <p data-i18n-key="servicesCat3Prod1Desc">Una máquina que encuentra, enriquece y califica leads de alta calidad mientras duermes.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="dot dot-blue"></span>
-                                <div>
-                                    <strong data-i18n-key="servicesCat3Prod2Title">Generador de "Rompehielos" para Correos en Frío</strong>
-                                    <p data-i18n-key="servicesCat3Prod2Desc">Usamos IA para crear mensajes de contacto personalizados que triplican tu tasa de respuesta.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                     <div class="products-column">
-                        <h3 class="products-category-page" data-i18n-key="servicesCat4Title">IA Avanzada y Consultoría</h3>
-                        <ul class="product-list-detailed">
-                            <li>
-                                <span class="dot dot-blue"></span>
-                                <div>
-                                    <strong data-i18n-key="productsCat4Prod1Title">Consultoría en Modelos de IA de Vanguardia</strong>
-                                    <p data-i18n-key="productsCat4Prod1Desc">Te ayudamos a elegir e implementar los mejores modelos del mercado (GPT-4o, Gemini 1.5, Llama 3, Claude 3) para tus necesidades específicas.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- R&D Section -->
-                <section class="research-section" style="padding-top: 6rem; padding-bottom: 2rem;">
-                    <h2 class="section-title" data-i18n-key="researchTitle">Nuestro Laboratorio de I+D: Co-creando el Futuro de la IA</h2>
-                    <p class="section-subtitle" data-i18n-key="researchSubtitle">Estamos constantemente explorando la frontera de la IA para resolver los problemas del mañana. Estas son algunas de las áreas en las que estamos trabajando activamente:</p>
-                    <div class="research-grid">
-                        <div class="research-card">
-                            <span class="research-card-category" data-i18n-key="researchCard1Cat">HealthTech - Diagnóstico Asistido</span>
-                            <h3 data-i18n-key="researchCard1Title">Detección de Placas Arteriales (I+D)</h3>
-                            <p data-i18n-key="researchCard1Desc">Investigación activa en modelos de Computer Vision (CNN) para la detección de ateromas en imágenes de angioplastias y ACVs, con el objetivo de asistir al diagnóstico neurológico y cardiológico.</p>
-                        </div>
-                        <div class="research-card">
-                            <span class="research-card-category" data-i18n-key="researchCard2Cat">FinTech - Análisis Predictivo</span>
-                            <h3 data-i18n-key="researchCard2Title">Modelos Predictivos para Análisis de Acciones</h3>
-                            <p data-i18n-key="researchCard2Desc">Explorando la aplicación de IA para analizar sentimiento de mercado y datos técnicos, con el objetivo de generar insights de inversión.</p>
-                        </div>
-                        <div class="research-card">
-                            <span class="research-card-category" data-i18n-key="researchCard3Cat">Logística - Optimización de Tiempos</span>
-                            <h3 data-i18n-key="researchCard3Title">Optimización de Cadenas de Suministro</h3>
-                            <p data-i18n-key="researchCard3Desc">Aplicando modelos matemáticos y de machine learning para predecir tiempos de llegada y optimizar rutas logísticas, basándonos en la experiencia de nuestro equipo.</p>
-                        </div>
-                        <div class="research-card">
-                            <span class="research-card-category" data-i18n-key="researchCard4Cat">LegalTech - Comprensión de Documentos</span>
-                            <h3 data-i18n-key="researchCard4Title">RAG sobre Corpus Legales Extensos</h3>
-                            <p data-i18n-key="researchCard4Desc">Perfeccionando nuestra tecnología RAG para permitir a profesionales del derecho hacer consultas en lenguaje natural sobre miles de páginas de leyes y contratos.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- New CTA buttons -->
-                <div class="cta-buttons text-center" style="padding: 4rem 0 2rem 0;">
-                    <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Agendar una llamada</a>
-                    <a href="https://lemon-sea-067efec0f.6.azurestaticapps.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n-key="accessDemo">Acceder al Chatbot de IA</a>
-                    <a href="index.html" class="btn btn-secondary home-link-btn" data-i18n-key="homeLink">Home</a>
-                </div>
-                
-                <!-- Copied Contact Section -->
-                <section id="contact-products-section" class="contact-section" style="padding-top: 2rem; padding-bottom: 0;">
-                    <div class="container">
-                        <h2 class="section-title" data-i18n-key="contactTitle">Construyamos algo brillante juntos.</h2>
-                        <p class="section-subtitle" data-i18n-key="contactSubtitle">Cuéntanos sobre tu proyecto y te responderemos a la brevedad.</p>
-                        <form class="contact-form" id="contact-form-products">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name-products" name="name" data-i18n-placeholder-key="contactNamePlaceholder" placeholder="Tu Nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email-products" name="email" data-i18n-placeholder-key="contactEmailPlaceholder" placeholder="Tu Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" id="phone-products" name="phone" data-i18n-placeholder-key="contactPhonePlaceholder" placeholder="Your Phone (Optional)">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message-products" name="message" data-i18n-placeholder-key="contactMessagePlaceholder" placeholder="Tu idea, proyecto o pregunta..." required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary" data-i18n-key="contactSubmitButton">Enviar Mensaje</button>
-                                <div id="form-status-products"></div>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </section>
+        <div id="products-page" class="products-page-section">
+            <!-- This content is now moved to the #solutions section on the main page -->
+        </div>
 
         <section id="privacy-policy-page" class="legal-page-section">
             <div class="container">
@@ -463,7 +406,7 @@
                     <h2>Contact Us</h2>
                     <p>If you have any questions about this Privacy Policy, You can contact us:</p>
                     <ul>
-                        <li>By email: <a href="mailto:contact@autotasksolutions.site">contact@autotasksolutions.site</a></li>
+                        <li>By email: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
                         <li>By visiting this page on our website: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
                     </ul>
                 </div>
@@ -517,7 +460,7 @@
 
                     <h3>7. Copyright Infringement Notices</h3>
                     <p>We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on the Service infringes on the copyright or other intellectual property infringement of any person.</p>
-                    <p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to <a href="mailto:contact@autotasksolutions.site">contact@autotasksolutions.site</a>, with the subject line: "Copyright Infringement" and include in your claim a detailed description of the alleged infringement.</p>
+                    <p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a>, with the subject line: "Copyright Infringement" and include in your claim a detailed description of the alleged infringement.</p>
 
                     <h3>8. Disclaimer of Warranties &amp; Limitation of Liability</h3>
                     <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Autotask Solutions makes no warranties, expressed or implied, and hereby disclaims all other warranties.</p>
@@ -533,7 +476,7 @@
                     <h3>11. Contact Us</h3>
                     <p>If you have any questions about these Terms, you can contact us:</p>
                     <ul>
-                        <li>By email: <a href="mailto:contact@autotasksolutions.site">contact@autotasksolutions.site</a></li>
+                        <li>By email: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
                         <li>By visiting this page on our website: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
                     </ul>
 
@@ -579,7 +522,7 @@
 
                     <h3>7. Notificaciones de Infracción de Derechos de Autor</h3>
                     <p>Respetamos los derechos de propiedad intelectual de otros. Es nuestra política responder a cualquier reclamo de que el Contenido publicado en el Servicio infringe los derechos de autor u otra propiedad intelectual de cualquier persona.</p>
-                    <p>Si usted es propietario de derechos de autor, o está autorizado en nombre de uno, y cree que la obra protegida por derechos de autor ha sido copiada de una manera que constituye una infracción, por favor envíe su reclamo por correo electrónico a <a href="mailto:contact@autotasksolutions.site">contact@autotasksolutions.site</a>, con el asunto: "Infracción de Derechos de Autor" e incluya en su reclamo una descripción detallada de la presunta infracción.</p>
+                    <p>Si usted es propietario de derechos de autor, o está autorizado en nombre de uno, y cree que la obra protegida por derechos de autor ha sido copiada de una manera que constituye una infracción, por favor envíe su reclamo por correo electrónico a <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a>, con el asunto: "Infracción de Derechos de Autor" e incluya en su reclamo una descripción detallada de la presunta infracción.</p>
 
                     <h3>8. Exclusión de Garantías y Limitación de Responsabilidad</h3>
                     <p>El Servicio se proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD". Autotask Solutions no ofrece garantías, expresas o implícitas, y por la presente renuncia a todas las demás garantías.</p>
@@ -595,7 +538,7 @@
                     <h3>11. Contáctenos</h3>
                     <p>Si tiene alguna pregunta sobre estos Términos, puede contactarnos:</p>
                     <ul>
-                        <li>Por correo electrónico: <a href="mailto:contact@autotasksolutions.site">contact@autotasksolutions.site</a></li>
+                        <li>Por correo electrónico: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
                         <li>Visitando esta página en nuestro sitio web: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
                     </ul>
                 </div>
@@ -609,7 +552,7 @@
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-legal">
-                <p data-i18n-key="footerCopyright">© 2024 Autotask Solutions. All rights reserved.</p>
+                <p data-i18n-key="footerCopyright">© 2025 Autotask Solutions. All rights reserved.</p>
                 <nav class="footer-links">
                     <a href="privacy-policy.html" rel="noopener noreferrer" data-i18n-key="privacyPolicyLink">Privacy Policy</a>
                     <a href="terms-of-service.html" rel="noopener noreferrer" data-i18n-key="termsOfServiceLink">Terms of Service</a>
@@ -634,6 +577,11 @@
             <!-- end Google Calendar Appointment Scheduling -->
         </div>
     </div>
+    
+    <button id="scroll-to-top-btn" class="scroll-to-top" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+    
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="module" src="index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
