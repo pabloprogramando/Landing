@@ -332,7 +332,7 @@ const translations = {
         servicesCat3Prod2Desc: "我们使用人工智能创建个性化的外联信息，使您的回复率增加三倍。",
         servicesCat4Title: "高级人工智能与咨询",
         productsCat4Prod1Title: "前沿人工智能模型咨询",
-        productsCat4Prod1Desc: "我们帮助您根据您的特定需求，选择和实施市场上最好的模型 (OpneAi GPT, Google Gemini, Anthropic, Llama, Claude, Mistral)。",
+        productsCat4Prod1Desc: "我们帮助您根据您的特定需求，选择和实施市场上最好的模型（OpneAi GPT, Google Gemini, Anthropic, Llama, Claude, Mistral）。",
         researchTitle: "机器学习：视觉、预测、推荐系统",
         researchSubtitle: "我们为计算机视觉、预测分析和推荐引擎构建和部署定制的机器学习模型。",
         researchCard1Cat: "健康科技 - 辅助诊断",
