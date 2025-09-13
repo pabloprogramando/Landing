@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="pageTitle">Autotask Solutions | IA para tu empresa</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50' y='55' dominant-baseline='middle' text-anchor='middle' font-size='55' font-family='Inter, sans-serif' font-weight='bold' fill='white'>AS</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+  <script type="module" crossorigin src="/assets/index-gudXAVwh.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CQ0ZqO9Z.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="index.html" class="logo" data-i18n-key="logo">Autotask Solutions</a>
+            <div class="nav-links" id="nav-links-container">
+                <a href="#solutions" class="nav-link" data-i18n-key="solutionsLink">Solutions</a>
+                <a href="#contact" class="nav-link" data-i18n-key="contactUsLink">Contact Us</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round">
+                            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </div>
+                    </label>
+                </div>
+                 <div class="lang-switch-wrapper">
+                    <select id="lang-switcher" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="zh">中文</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links-container">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="main-content">
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section text-center">
+                <div class="animated-bg"></div>
+                <div class="container">
+                    <h1 data-i18n-key="heroTitle">Add Intelligence to Your Existing Systems.</h1>
+                    <p class="hero-subtitle" data-i18n-key="heroSubtitle">We build AI modules that plug into your current operation to boost your sales, logistics, and efficiency.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Schedule a call</a>
+                        <a href="https://aichatassistant-n8n-v2-app-cuyso.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n-key="accessDemo">Try our Chatbot</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n-key="contactUsLink">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions Section -->
+            <section id="solutions" class="solutions-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n-key="productsPageHeading">Our Solutions</h2>
+                    <p class="section-subtitle" data-i18n-key="productsPageSubtitle">Explore the AI-powered tools we've built to drive efficiency and innovation.</p>
+                    <div class="solutions-grid">
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat2Title">Conversational Agents & RAG</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod2Title">RAG Knowledge Base Engine</strong>
+                                        <p data-i18n-key="servicesCat2Prod2Desc">We turn your documents into an expert brain that your systems can consult.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod3Title">Instagram AI Chatbot</strong>
+                                        <p data-i18n-key="servicesCat2Prod3Desc">Engage your audience and automate sales directly on Instagram, 24/7.</p>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <span class="dot dot-yellow"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat2Prod1Title">Psychology & Mental Health Chatbot</strong>
+                                        <p data-i18n-key="servicesCat2Prod1Desc">An empathetic and secure assistant, designed with psychological principles to offer support.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat3Title">Lead Generation & Sales Automation</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat3Prod1Title">Intelligence Search & Lead Generation Machine</strong>
+                                        <p data-i18n-key="servicesCat3Prod1Desc">A machine that finds, enriches, and qualifies high-quality leads while you sleep.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat3Prod2Title">Cold Email 'Icebreaker' Generator</strong>
+                                        <p data-i18n-key="servicesCat3Prod2Desc">We use AI to create personalized outreach messages that triple your response rate.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat1Title">Automation & Optimization</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod1Title">Automation Pack for Startups/SMEs</strong>
+                                        <p data-i18n-key="servicesCat1Prod1Desc">Your first step to efficiency. We automate your 3 most repetitive processes.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-yellow"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod2Title">Intelligent Data Extractor (PDFs & Websites)</strong>
+                                        <p data-i18n-key="servicesCat1Prod2Desc">We transform your documents and websites into structured data, without errors.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="dot dot-green"></span>
+                                    <div>
+                                        <strong data-i18n-key="servicesCat1Prod3Title">Systems & API Integration</strong>
+                                        <p data-i18n-key="servicesCat1Prod3Desc">We make all your applications (CRM, ERP, etc.) communicate with each other.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="solutions-column">
+                            <h3 class="solutions-category-page" data-i18n-key="servicesCat4Title">Advanced AI & Consulting</h3>
+                            <ul class="solution-list-detailed">
+                                <li>
+                                    <span class="dot dot-blue"></span>
+                                    <div>
+                                        <strong data-i18n-key="productsCat4Prod1Title">Consulting on Cutting-Edge AI Models</strong>
+                                        <p data-i18n-key="productsCat4Prod1Desc">We help you choose and implement the best models on the market (OpenAi GPT, Google Gemini, Anthropic, Llama, Claude, Mistral) for your specific needs.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- R&D Section -->
+            <section id="research" class="research-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n-key="researchTitle">Our R&D Lab: AI for Specific Industries</h2>
+                    <p class="section-subtitle" data-i18n-key="researchSubtitle">We focus on applying AI to solve concrete problems in complex industries.</p>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard1Cat">HealthTech - Assisted Diagnosis</span>
+                            <h3 data-i18n-key="researchCard1Title">Arterial Plaque Detection (R&D)</h3>
+                            <p data-i18n-key="researchCard1Desc">Active research in Computer Vision models (CNN) for detecting atheromas in angioplasty and stroke images, aiming to assist neurological and cardiological diagnosis.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard2Cat">FinTech - Predictive Analysis</span>
+                            <h3 data-i18n-key="researchCard2Title">Predictive Models for Stock Analysis</h3>
+                            <p data-i18n-key="researchCard2Desc">Exploring the application of AI to analyze market sentiment and technical data, with the goal of generating investment insights.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard3Cat">Logistics - Time Optimization</span>
+                            <h3 data-i18n-key="researchCard3Title">Supply Chain Optimization</h3>
+                            <p data-i18n-key="researchCard3Desc">Applying mathematical and machine learning models to predict arrival times and optimize logistics routes, based on our team's experience.</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-card-category" data-i18n-key="researchCard4Cat">LegalTech - Document Understanding</span>
+                            <h3 data-i18n-key="researchCard4Title">RAG on Extensive Legal Corpora</h3>
+                            <p data-i18n-key="researchCard4Desc">Perfecting our RAG technology to allow legal professionals to make natural language queries on thousands of pages of laws and contracts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section id="team" class="team-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n-key="teamTitle">Meet Our Team</h2>
+                    <p class="section-subtitle" data-i18n-key="teamSubtitle">A unique fusion of AI architecture and end-to-end engineering.</p>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://i.ibb.co/L6V2h7N/joaquin.jpg" alt="Team member Joaquín" class="team-photo">
+                            <h3 class="team-name" data-i18n-key="teamMember1Name">Joaquín</h3>
+                            <p class="team-title" data-i18n-key="teamMember1Title">AI Specialist & Data Scientist</p>
+                            <p class="team-desc" data-i18n-key="teamMember1Desc">+4 years of experience in ML projects. Specializes in AI Agents, RAG, and fine-tuning models to solve complex business challenges.</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="https://i.ibb.co/K2vcz8w/pablo.jpg" alt="Team member Pablo" class="team-photo">
+                            <h3 class="team-name" data-i18n-key="teamMember2Name">Pablo</h3>
+                            <p class="team-title" data-i18n-key="teamMember2Title">Software & Automation Engineer</p>
+                            <p class="team-desc" data-i18n-key="teamMember2Desc">+5 years of experience. Expert in designing and deploying robust AI chatbots and N8N automation workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="container text-center">
+                     <div class="cta-section">
+                        <h2 class="section-title" data-i18n-key="ctaTitle">Ready to start?</h2>
+                        <a href="#" class="btn btn-primary schedule-call-btn" data-i18n-key="scheduleCall">Schedule a Call With Us</a>
+                        <p class="contact-action-subtitle"><a href="#contact-form" data-i18n-key="contactActionSubtitle">Or, write to us and we’ll get back to you shortly.</a></p>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder-key="contactNamePlaceholder" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" data-i18n-placeholder-key="contactEmailPlaceholder" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" name="phone" data-i18n-placeholder-key="contactPhonePlaceholder" placeholder="Your Phone (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" data-i18n-placeholder-key="contactMessagePlaceholder" placeholder="Your idea, project, or question..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" data-i18n-key="contactSubmitButton">Send Message</button>
+                            <div id="form-status"></div>
+                            <p class="email-contact-link" data-i18n-key="contactOrEmail"></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="products-page" class="products-page-section">
+            <!-- This content is now moved to the #solutions section on the main page -->
+        </div>
+
+        <section id="privacy-policy-page" class="legal-page-section">
+            <div class="container">
+                <div class="legal-content">
+                    <h1>Privacy Policy</h1>
+                    <p><strong>Last updated:</strong> August 22, 2025</p>
+                    <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+                    <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+                    
+                    <h2>Interpretation and Definitions</h2>
+                    <h3>Interpretation</h3>
+                    <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                    
+                    <h3>Definitions</h3>
+                    <p>For the purposes of this Privacy Policy:</p>
+                    <ul>
+                        <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+                        <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+                        <li><strong>Application</strong> refers to AI Chat Assistant, the software program provided by the Company.</li>
+                        <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Autotask Solutions.</li>
+                        <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+                        <li><strong>Country</strong> refers to: Argentina</li>
+                        <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+                        <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+                        <li><strong>Service</strong> refers to the Application or the Website or both.</li>
+                        <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+                        <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+                        <li><strong>Website</strong> refers to Autotask Solutions, accessible from <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
+                        <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+                    </ul>
+
+                    <h2>Collecting and Using Your Personal Data</h2>
+                    <h3>Types of Data Collected</h3>
+                    <h4>Personal Data</h4>
+                    <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+                    <ul>
+                        <li>Email address</li>
+                        <li>First name and last name</li>
+                        <li>Address, State, Province, ZIP/Postal code, City</li>
+                        <li>Usage Data</li>
+                    </ul>
+
+                    <h4>Usage Data</h4>
+                    <p>Usage Data is collected automatically when using the Service.</p>
+                    <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                    <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+                    <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+                    
+                    <h3>Tracking Technologies and Cookies</h3>
+                    <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
+                    <ul>
+                        <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
+                        <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
+                    </ul>
+                    <p>Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.</p>
+                    <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
+                    <ul>
+                        <li>
+                            <strong>Necessary / Essential Cookies</strong>
+                            <p>Type: Session Cookies</p>
+                            <p>Administered by: Us</p>
+                            <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
+                        </li>
+                        <li>
+                            <strong>Cookies Policy / Notice Acceptance Cookies</strong>
+                            <p>Type: Persistent Cookies</p>
+                            <p>Administered by: Us</p>
+                            <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
+                        </li>
+                        <li>
+                            <strong>Functionality Cookies</strong>
+                            <p>Type: Persistent Cookies</p>
+                            <p>Administered by: Us</p>
+                            <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
+                        </li>
+                    </ul>
+                    <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+                    
+                    <h2>Use of Your Personal Data</h2>
+                    <p>The Company may use Personal Data for the following purposes:</p>
+                    <ul>
+                        <li><strong>To provide and maintain our Service,</strong> including to monitor the usage of our Service.</li>
+                        <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+                        <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+                        <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
+                        <li><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</li>
+                        <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+                        <li><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</li>
+                        <li><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
+                    </ul>
+                    <p>We may share Your personal information in the following situations:</p>
+                    <ul>
+                        <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+                        <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+                        <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+                        <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+                        <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+                        <li><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</li>
+                    </ul>
+
+                    <h2>Retention of Your Personal Data</h2>
+                    <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+                    <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
+
+                    <h2>Transfer of Your Personal Data</h2>
+                    <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
+                    <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+                    <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+
+                    <h2>Delete Your Personal Data</h2>
+                    <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+                    <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
+                    <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
+                    <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+                    
+                    <h2>Disclosure of Your Personal Data</h2>
+                    <h3>Business Transactions</h3>
+                    <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+                    
+                    <h3>Law enforcement</h3>
+                    <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+                    
+                    <h3>Other legal requirements</h3>
+                    <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+                    <ul>
+                        <li>Comply with a legal obligation</li>
+                        <li>Protect and defend the rights or property of the Company</li>
+                        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                        <li>Protect the personal safety of Users of the Service or the public</li>
+                        <li>Protect against legal liability</li>
+                    </ul>
+
+                    <h2>Security of Your Personal Data</h2>
+                    <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+                    
+                    <h2>Children's Privacy</h2>
+                    <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+                    <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+                    
+                    <h2>Links to Other Websites</h2>
+                    <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+                    <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+                    
+                    <h2>Changes to this Privacy Policy</h2>
+                    <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+                    <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+                    <ul>
+                        <li>By email: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
+                        <li>By visiting this page on our website: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container text-center" style="padding: 2rem 0;">
+                <a href="index.html" class="btn btn-secondary home-link-btn" data-i18n-key="homeLink">Home</a>
+            </div>
+        </section>
+
+        <section id="terms-of-service-page" class="legal-page-section">
+            <div class="container">
+                <div class="legal-content">
+                    <h1>Terms and Conditions</h1>
+                    
+                    <h2>English Version</h2>
+                    <p><strong>Last Updated:</strong> August 21, 2025</p>
+                    <p>Welcome to Autotask Solutions!</p>
+                    <p>These Terms and Conditions ("Terms") govern your use of our website located at <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a> (the "Website") and our "AI Chat Assistant" mobile application (the "App"), collectively referred to as the "Service". The Service is operated by Autotask Solutions ("us", "we", or "our").</p>
+                    <p>Please read these Terms carefully before using our Service. By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.</p>
+                    
+                    <h3>1. Accounts</h3>
+                    <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+                    <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password. You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                    <p>You must be at least 18 years old to create an account and use the Service.</p>
+                    
+                    <h3>2. User-Generated Content</h3>
+                    <p>Our Service allows you to post, link, store, share, and otherwise make available certain information, text, graphics, prompts, outputs, or other material ("Content"). You are responsible for the Content that you post to the Service, including its legality, reliability, and appropriateness.</p>
+                    <p>By posting Content to the Service, you grant us a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform, and distribute such Content. This license is for the limited purpose of operating, promoting, and improving our Services, and to develop new ones.</p>
+                    <p>You represent and warrant that: (i) the Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms, and (ii) the posting of your Content on or through the Service does not violate the privacy rights, publicity rights, copyrights, contract rights, or any other rights of any person.</p>
+                    <p>We reserve the right to block or remove any Content that we determine to be: (a) abusive, defamatory, or obscene; (b) fraudulent, deceptive, or misleading; (c) in violation of a copyright, trademark or, other intellectual property right of another; or (d) offensive or otherwise unacceptable to us in our sole discretion.</p>
+
+                    <h3>3. Purchases, Subscriptions, and Payments</h3>
+                    <h4>a. General:</h4>
+                    <p>If you wish to purchase any product or service made available through the Service ("Purchase"), including one-time payments or subscriptions, you may be asked to supply certain information relevant to your Purchase including, without limitation, your credit card number, the expiration date of your credit card, and your billing address. We use third-party payment processors to handle all payments.</p>
+                    <h4>b. Subscriptions:</h4>
+                    <p>Some parts of the Service are billed on a subscription basis ("Subscription(s)"). You will be billed in advance on a recurring and periodic basis ("Billing Cycle"). Billing cycles are set either on a monthly or annual basis, depending on the type of subscription plan you select.</p>
+                    <p>At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or Autotask Solutions cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting our support team.</p>
+                    <h4>c. Fee Changes:</h4>
+                    <p>Autotask Solutions, in its sole discretion and at any time, may modify the Subscription fees. Any Subscription fee change will become effective at the end of the then-current Billing Cycle. We will provide you with reasonable prior notice of any change in Subscription fees to give you an opportunity to terminate your Subscription before such change becomes effective.</p>
+                    <h4>d. Refunds:</h4>
+                    <p>Except when required by law, paid Subscription fees are non-refundable.</p>
+
+                    <h3>4. Intellectual Property</h3>
+                    <p>The Service and its original content (excluding Content provided by users), features, functionality, visual design, logos, and trademarks are and will remain the exclusive property of Autotask Solutions and its licensors. The Service is protected by copyright, trademark, and other laws of Argentina and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Autotask Solutions.</p>
+
+                    <h3>5. Feedback and Suggestions</h3>
+                    <p>If you provide us with any feedback, ideas, or suggestions regarding the Service ("Feedback"), you agree that we are free to use such Feedback for any purpose without any compensation, credit, or obligation to you. You grant us a perpetual, irrevocable, worldwide, royalty-free license to implement, use, modify, or otherwise exploit the Feedback in any way.</p>
+
+                    <h3>6. Promotions</h3>
+                    <p>Any contests, sweepstakes, or other promotions (collectively, "Promotions") made available through the Service may be governed by rules that are separate from these Terms. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply.</p>
+
+                    <h3>7. Copyright Infringement Notices</h3>
+                    <p>We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on the Service infringes on the copyright or other intellectual property infringement of any person.</p>
+                    <p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a>, with the subject line: "Copyright Infringement" and include in your claim a detailed description of the alleged infringement.</p>
+
+                    <h3>8. Disclaimer of Warranties &amp; Limitation of Liability</h3>
+                    <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Autotask Solutions makes no warranties, expressed or implied, and hereby disclaims all other warranties.</p>
+                    <p>The outputs generated by the AI Chat Assistant may contain inaccuracies or errors. You should not rely on the factual accuracy of the output and should independently verify any information before making decisions. Autotask Solutions shall not be held liable for any damages resulting from the use of or reliance on the information provided by the Service.</p>
+                    <p>In no event shall Autotask Solutions, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.</p>
+                    
+                    <h3>9. Governing Law</h3>
+                    <p>These Terms shall be governed and construed in accordance with the laws of Argentina, without regard to its conflict of law provisions. Any dispute arising from these Terms will be submitted to the competent courts of the City of Buenos Aires, Argentina.</p>
+                    
+                    <h3>10. Changes to These Terms</h3>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this page. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+                    
+                    <h3>11. Contact Us</h3>
+                    <p>If you have any questions about these Terms, you can contact us:</p>
+                    <ul>
+                        <li>By email: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
+                        <li>By visiting this page on our website: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
+                    </ul>
+
+                    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+                    <h2>Versión en Español</h2>
+                    <h1>Términos y Condiciones</h1>
+                    <p><strong>Última Actualización:</strong> 21 de agosto de 2025</p>
+                    <p>¡Bienvenido a Autotask Solutions!</p>
+                    <p>Estos Términos y Condiciones ("Términos") rigen el uso de nuestro sitio web ubicado en <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a> (el "Sitio Web") y nuestra aplicación móvil "AI Chat Assistant" (la "App"), referidos colectivamente como el "Servicio". El Servicio es operado por Autotask Solutions ("nosotros" o "nuestro").</p>
+                    <p>Por favor, lea estos Términos detenidamente antes de utilizar nuestro Servicio. Al acceder o utilizar el Servicio, usted acepta estar sujeto a estos Términos. Si no está de acuerdo con alguna parte de los términos, no podrá acceder al Servicio.</p>
+
+                    <h3>1. Cuentas</h3>
+                    <p>Al crear una cuenta con nosotros, debe proporcionarnos información precisa, completa y actualizada en todo momento. El incumplimiento de esta obligación constituye una violación de los Términos, lo que puede resultar en la terminación inmediata de su cuenta en nuestro Servicio.</p>
+                    <p>Usted es responsable de salvaguardar la contraseña que utiliza para acceder al Servicio y de cualquier actividad o acción realizada con su contraseña. Usted se compromete a no revelar su contraseña a terceros. Debe notificarnos inmediatamente si tiene conocimiento de cualquier violación de seguridad o uso no autorizado de su cuenta.</p>
+                    <p>Debe tener al menos 18 años para crear una cuenta y utilizar el Servicio.</p>
+
+                    <h3>2. Contenido Generado por el Usuario</h3>
+                    <p>Nuestro Servicio le permite publicar, enlazar, almacenar, compartir y poner a disposición cierta información, texto, gráficos, prompts, respuestas u otro material ("Contenido"). Usted es responsable del Contenido que publica en el Servicio, incluyendo su legalidad, fiabilidad y adecuación.</p>
+                    <p>Al publicar Contenido en el Servicio, nos otorga una licencia mundial, no exclusiva, libre de regalías, sublicensable y transferible para usar, alojar, almacenar, reproducir, modificar, crear obras derivadas, comunicar, publicar, ejecutar públicamente y distribuir dicho Contenido. Esta licencia tiene el propósito limitado de operar, promover y mejorar nuestros Servicios, y de desarrollar otros nuevos.</p>
+                    <p>Usted declara y garantiza que: (i) el Contenido es suyo (usted es el propietario) o tiene el derecho de usarlo y otorgarnos los derechos y la licencia según lo dispuesto en estos Términos, y (ii) la publicación de su Contenido en o a través del Servicio no viola los derechos de privacidad, derechos de publicidad, derechos de autor, derechos contractuales o cualquier otro derecho de cualquier persona.</p>
+                    <p>Nos reservamos el derecho de bloquear o eliminar cualquier Contenido que determinemos que es: (a) abusivo, difamatorio u obsceno; (b) fraudulento, engañoso o falaz; (c) que viola un derecho de autor, marca registrada u otro derecho de propiedad intelectual de un tercero; o (d) ofensivo o de otro modo inaceptable para nosotros a nuestra entera discreción.</p>
+
+                    <h3>3. Compras, Suscripciones y Pagos</h3>
+                    <h4>a. General:</h4>
+                    <p>Si desea comprar cualquier producto o servicio disponible a través del Servicio ("Compra"), incluyendo pagos únicos o suscripciones, es posible que se le pida que suministre cierta información relevante para su Compra, incluyendo, sin limitación, el número de su tarjeta de crédito, la fecha de vencimiento de su tarjeta de crédito y su dirección de facturación. Utilizamos procesadores de pago de terceros para gestionar todos los pagos.</p>
+                    <h4>b. Suscripciones:</h4>
+                    <p>Algunas partes del Servicio se facturan mediante suscripción ("Suscripción(es)"). Se le facturará por adelantado de forma recurrente y periódica ("Ciclo de Facturación"). Los ciclos de facturación se establecen de forma mensual o anual, dependiendo del tipo de plan de suscripción que seleccione.</p>
+                    <p>Al final de cada Ciclo de Facturación, su Suscripción se renovará automáticamente bajo las mismas condiciones, a menos que usted la cancele o Autotask Solutions la cancele. Puede cancelar la renovación de su Suscripción a través de la página de gestión de su cuenta en línea o contactando a nuestro equipo de soporte.</p>
+                    <h4>c. Cambios de Tarifas:</h4>
+                    <p>Autotask Solutions, a su entera discreción y en cualquier momento, podrá modificar las tarifas de Suscripción. Cualquier cambio en la tarifa de Suscripción entrará en vigor al final del Ciclo de Facturación vigente en ese momento. Le proporcionaremos un aviso previo razonable de cualquier cambio en las tarifas para darle la oportunidad de cancelar su Suscripción antes de que dicho cambio entre en vigor.</p>
+                    <h4>d. Reembolsos:</h4>
+                    <p>Salvo cuando lo exija la ley (como el derecho de arrepentimiento previsto en la Ley de Defensa del Consumidor N° 24.240 de Argentina), las tarifas de Suscripción pagadas no son reembolsables.</p>
+
+                    <h3>4. Propiedad Intelectual</h3>
+                    <p>El Servicio y su contenido original (excluyendo el Contenido proporcionado por los usuarios), características, funcionalidad, diseño visual, logotipos y marcas comerciales son y seguirán siendo propiedad exclusiva de Autotask Solutions y sus licenciantes. El Servicio está protegido por derechos de autor, marcas comerciales y otras leyes de Argentina y de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin el consentimiento previo por escrito de Autotask Solutions.</p>
+
+                    <h3>5. Comentarios y Sugerencias</h3>
+                    <p>Si nos proporciona comentarios, ideas o sugerencias sobre el Servicio ("Feedback"), usted acepta que somos libres de utilizar dicho Feedback para cualquier propósito sin compensación, crédito u obligación alguna hacia usted. Nos otorga una licencia perpetua, irrevocable, mundial y libre de regalías para implementar, usar, modificar o explotar de cualquier otra manera el Feedback.</p>
+
+                    <h3>6. Promociones</h3>
+                    <p>Cualquier concurso, sorteo u otra promoción (colectivamente, "Promociones") disponible a través del Servicio puede regirse por reglas que son independientes de estos Términos. Si participa en alguna Promoción, por favor revise las reglas aplicables, así como nuestra Política de Privacidad. Si las reglas de una Promoción entran en conflicto con estos Términos, prevalecerán las reglas de la Promoción.</p>
+
+                    <h3>7. Notificaciones de Infracción de Derechos de Autor</h3>
+                    <p>Respetamos los derechos de propiedad intelectual de otros. Es nuestra política responder a cualquier reclamo de que el Contenido publicado en el Servicio infringe los derechos de autor u otra propiedad intelectual de cualquier persona.</p>
+                    <p>Si usted es propietario de derechos de autor, o está autorizado en nombre de uno, y cree que la obra protegida por derechos de autor ha sido copiada de una manera que constituye una infracción, por favor envíe su reclamo por correo electrónico a <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a>, con el asunto: "Infracción de Derechos de Autor" e incluya en su reclamo una descripción detallada de la presunta infracción.</p>
+
+                    <h3>8. Exclusión de Garantías y Limitación de Responsabilidad</h3>
+                    <p>El Servicio se proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD". Autotask Solutions no ofrece garantías, expresas o implícitas, y por la presente renuncia a todas las demás garantías.</p>
+                    <p>Las respuestas generadas por el AI Chat Assistant pueden contener imprecisiones o errores. Usted no debe confiar en la exactitud fáctica de las respuestas y debe verificar de forma independiente cualquier información antes de tomar decisiones. Autotask Solutions no será responsable de ningún daño resultante del uso o la confianza en la información proporcionada por el Servicio.</p>
+                    <p>En ningún caso Autotask Solutions, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo, sin limitación, la pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de su acceso o uso o incapacidad para acceder o usar el Servicio.</p>
+
+                    <h3>9. Ley Aplicable y Jurisdicción</h3>
+                    <p>Estos Términos se regirán e interpretarán de acuerdo con las leyes de la República Argentina, sin tener en cuenta sus disposiciones sobre conflicto de leyes. Cualquier disputa que surja de estos Términos será sometida a la jurisdicción de los tribunales competentes de la Ciudad Autónoma de Buenos Aires, Argentina.</p>
+
+                    <h3>10. Cambios a Estos Términos</h3>
+                    <p>Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Notificaremos cualquier cambio publicando los nuevos Términos en esta página. Al continuar accediendo o utilizando nuestro Servicio después de que esas revisiones entren en vigor, usted acepta estar sujeto a los términos revisados.</p>
+
+                    <h3>11. Contáctenos</h3>
+                    <p>Si tiene alguna pregunta sobre estos Términos, puede contactarnos:</p>
+                    <ul>
+                        <li>Por correo electrónico: <a href="mailto:info@autotasksolutions.site">info@autotasksolutions.site</a></li>
+                        <li>Visitando esta página en nuestro sitio web: <a href="https://autotasksolutions.site/">https://autotasksolutions.site/</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="container text-center" style="padding: 2rem 0;">
+                <a href="index.html" class="btn btn-secondary home-link-btn" data-i18n-key="homeLink">Home</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-legal">
+                <p data-i18n-key="footerCopyright">© 2025 Autotask Solutions. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="privacy-policy.html" rel="noopener noreferrer" data-i18n-key="privacyPolicyLink">Privacy Policy</a>
+                    <a href="terms-of-service.html" rel="noopener noreferrer" data-i18n-key="termsOfServiceLink">Terms of Service</a>
+                </nav>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3CdKmn5fn00yJoPOEDwNwUqLaIQklaZ2Izv6RkgopK3hg28v8d8YIL1GMF9ifnqikDovLd5wtV?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
+        </div>
+    </div>
+    
+    <button id="scroll-to-top-btn" class="scroll-to-top" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+</html>
