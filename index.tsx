@@ -705,7 +705,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('https://n8n-app.agreeableriver-225df3a2.westus.azurecontainerapps.io/webhook/9bfaf4bf-38ae-4d83-b90b-8b87da297e6d', {
+                const response = await fetch('https://n8n-n8n.bxfyrm.easypanel.host/webhook/9bfaf4bf-38ae-4d83-b90b-8b87da297e6d', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
