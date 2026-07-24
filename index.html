@@ -584,6 +584,23 @@
     
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="module" src="index.tsx"></script>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":""};
+      (function(d,t) {
+        var BASE_URL="https://autotasksolutions-chatwoot.bxfyrm.easypanel.host";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: '4X9Fioait8jW2FZtn8qhCUYF',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+
 </body>
 </html>
